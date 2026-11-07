@@ -10,7 +10,7 @@
 <body>
 <div class="app-shell">
 <aside class="sidebar" id="sidebar">
-  <a class="brand" href="#today" aria-label="Daymark home"><span class="brand-mark">✳</span><span><b>daymark</b><small>Plan · Focus · Achieve</small></span></a>
+  <div class="sidebar-top"><a class="brand" href="#today" aria-label="Daymark home"><span class="brand-mark">✳</span><span><b>daymark</b><small>Plan · Focus · Achieve</small></span></a><button class="sidebar-close" id="sidebarClose" type="button" aria-label="Close navigation">×</button></div>
   <label class="search-wrap"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search anything…" aria-label="Search tasks and notes"></label>
   <nav class="primary-nav" aria-label="Main navigation">
     <button class="nav-item active" data-view="today"><span>☆</span>Today <i id="todayCount">0</i></button>
@@ -33,8 +33,9 @@
     <a class="service-link" href="../project-estimator.html"><span>↗</span> Freelance services &amp; estimator</a>
   </div>
 </aside>
+ <button class="sidebar-backdrop" id="sidebarBackdrop" type="button" aria-label="Close navigation" hidden></button>
 <main class="main-panel">
-  <header class="topbar"><button class="mobile-menu" id="menuBtn" aria-label="Open navigation">☰</button><div class="crumb">Your personal workspace</div><div class="top-actions"><span class="date-pill" id="dateLabel"></span><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☼</button><button class="avatar" aria-label="Profile">M</button></div></header>
+  <header class="topbar"><button class="mobile-menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button><div class="crumb">Your personal workspace</div><div class="top-actions"><span class="date-pill" id="dateLabel"></span><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☼</button><button class="avatar" aria-label="Profile">M</button></div></header>
   <div class="content" id="viewRoot">
     <section class="welcome-row"><div><p class="eyebrow">MONDAY MINDSET</p><h1>Make room for <em>what matters.</em></h1><p class="subtle">A calmer place to collect, plan and follow through.</p></div><div class="day-card"><span>✦</span><b id="greeting">Your day, your pace.</b><small id="daySummary">Start with one meaningful thing.</small></div></section>
     <section class="metric-grid">
