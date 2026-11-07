@@ -1,22 +1,23 @@
 # Daymark — Everyday Toolkit
 
-A small everyday-tools project built with HTML, CSS, and vanilla JavaScript.
+A personal workspace prototype built with HTML, CSS, and vanilla JavaScript.
 
-## Pages
-- `index.html`: daily checklist prototype.
-- `project-estimator.html`: interactive freelance project-price estimator.
+## Projects and pages
+- `index.html`: Official Daymark workspace for daily planning, tasks, lists, focus sessions, quick capture, routines, and workspace views.
+- `project-estimator.html`: Separate freelance project-price estimator, also linked from the Official dashboard.
+- `concept/`: Separate Concept workspace. Its layout and files are kept independent from Official.
 
-## Checklist features
-Add tasks, mark them complete, remove tasks, remove completed tasks, reset the list, and persist tasks in this browser.
+## Official workspace
+The workspace includes Today, Inbox, Upcoming, Someday, Logbook, custom lists, a focus timer, quick capture, routines, insights, settings, and data import/export. The mobile sidebar includes close controls.
 
-## Estimator features
-Choose a project type, page/screen count, complexity, optional add-ons, and an hourly planning rate. The displayed range updates as inputs change. The user can copy a summary to review.
+## Estimator
+Choose a project type, page/screen count, complexity, optional add-ons, and an hourly planning rate. The displayed range updates as inputs change, and a summary can be copied.
 
 ## Run
 Open `index.html` or `project-estimator.html` in a modern browser.
 
 ## Limitations
-Data is stored in this browser and is not synced. The estimator uses clearly labeled demo assumptions, not a market-validated pricing model. It does not account for every tax, expense, revision, legal term, or client circumstance. Confirm project scope before quoting. Test keyboard use and mobile layouts before presenting either page as client-ready.
+Workspace data is stored in this browser and is not synced to an account or cloud service. Integrations are interface/demo functionality, not live email, calendar, or health connections. The estimator uses editable demo assumptions, not a market-validated pricing model; it does not account for every tax, expense, revision, legal term, or client circumstance. Confirm project scope before quoting. Browser and mobile testing should be completed before presenting the site as client-ready.
 
 ## Future improvements
-Due dates and priorities for tasks, calculator input validation tests, editable pricing assumptions, saved estimates, print/export, accessibility checks, and user testing.
+Due dates and priorities, calculator input-validation tests, editable pricing assumptions, saved estimates, print/export, accessibility checks, and user testing.
