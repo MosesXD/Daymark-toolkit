@@ -1,7 +1,11 @@
 (() => {
   "use strict";
   const $ = id => document.getElementById(id);
-  const money = new Intl.NumberFormat("en-TT", { style: "currency", currency: "TTD", maximumFractionDigits: 0 });
+  const formatters = { ttd: new Intl.NumberFormat("en-TT", { style: "currency", currency: "TTD", maximumFractionDigits: 0 }), usd: new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }) };
+  let currency = "ttd";
+  const money = value => formatters[currency].format(currency === "usd" ? value / 6.67 : value);
+  const currencyButtons = document.querySelectorAll("[data-estimate-currency]");
+  currencyButtons.forEach(button => button.addEventListener("click", () => { currency = button.dataset.estimateCurrency; currencyButtons.forEach(item => item.setAttribute("aria-pressed", String(item === button))); calculate(); }));
   const fields = ["projectType", "pages", "complexity", "copy", "responsive", "rush", "rate"];
   const form = $("estimateForm"), message = $("message");
   function calculate() {
@@ -14,8 +18,8 @@
     const midpoint = (base * pageFactor * complexity + extras) * rush * rateFactor;
     const low = Math.round(midpoint * 0.85), high = Math.round(midpoint * 1.2);
     $("pagesOut").value = String(pages);
-    $("estimate").textContent = `${money.format(low)} – ${money.format(high)}`;
-    $("breakdown").textContent = `Planning midpoint ${money.format(Math.round(midpoint))} · editable demo assumptions, not a market-validated quote.`;
+    $("estimate").textContent = `${money(low)} – ${money(high)}`;
+    $("breakdown").textContent = `Planning midpoint ${money(Math.round(midpoint))} · USD uses a fixed planning equivalent (TT$6.67 per US$1), not a live exchange rate.`;
     return { low, high, midpoint: Math.round(midpoint) };
   }
   fields.forEach(id => $(id).addEventListener("input", () => { message.textContent = ""; calculate(); }));
@@ -23,7 +27,7 @@
     event.preventDefault();
     if (!form.reportValidity()) return;
     const result = calculate();
-    const summary = ["Daymark project planning estimate", `Estimated range: ${money.format(result.low)} – ${money.format(result.high)}`, `Planning midpoint: ${money.format(result.midpoint)}`, "Demo estimate only. Confirm scope, revisions, timeline, expenses, and terms before quoting."].join("\n");
+    const summary = ["Daymark project planning estimate", `Estimated range: ${money(result.low)} – ${money(result.high)}`, `Planning midpoint: ${money(result.midpoint)}`, "Planning estimate only. USD is a fixed planning equivalent, not a live conversion. Confirm scope, revisions, timeline, expenses, and terms before quoting."].join("\n");
     try {
       if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error("Clipboard unavailable");
       await navigator.clipboard.writeText(summary);
