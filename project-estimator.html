@@ -11,9 +11,10 @@
 <main>
 <section class="intro"><p class="eyebrow">FREELANCE PLANNING TOOL</p><h1>Price the work.<br><em>Know your scope.</em></h1><p>Build a rough estimate from project type, complexity, and extras. This is a planning aid, not a quote or guarantee.</p></section>
 <section class="calculator">
+<div class="currency-switch" role="group" aria-label="Estimate currency"><button type="button" data-estimate-currency="ttd" aria-pressed="true">TTD</button><button type="button" data-estimate-currency="usd" aria-pressed="false">USD</button></div>
 <form id="estimateForm">
 <label for="projectType">Project type</label>
-<select id="projectType"><option value="2500">Single landing page</option><option value="5000" selected>Small business website</option><option value="8500">Portfolio / multi-page site</option><option value="12000">Interactive web app prototype</option></select>
+<select id="projectType"><option value="2400">Starter website — one page</option><option value="4750" selected>Small business website — 3 to 5 pages</option><option value="6500">Larger / custom website — planning baseline</option></select>
 <label for="pages">Number of pages or main screens <output id="pagesOut">5</output></label>
 <input id="pages" type="range" min="1" max="12" value="5">
 <label for="complexity">Complexity</label>
@@ -23,11 +24,11 @@
 <label class="check"><input id="rush" type="checkbox"> Rush delivery (+25%)</label>
 <label for="rate">Your planning rate per hour (TTD)</label>
 <input id="rate" type="number" min="50" step="25" value="250" required>
-<div class="result"><span>Estimated planning range</span><strong id="estimate">TT$5,000 – TT$6,500</strong><small id="breakdown">Demo estimate only. Confirm scope, timeline, revisions, and expenses before quoting a client.</small></div>
+<div class="result"><span>Estimated planning range</span><strong id="estimate">TT$4,000 – TT$6,000</strong><small id="breakdown">Demo estimate only. Confirm scope, timeline, revisions, and expenses before quoting a client.</small></div>
 <button type="submit">Copy estimate summary</button><p id="message" role="status"></p>
 </form>
 </section>
-<aside><b>Important:</b> Replace the demo assumptions with your actual experience, costs, taxes, delivery time, and local market research. Never promise a fixed price until the scope is agreed with the client.</aside>
+<aside><b>Important:</b> The public starting ranges are TT$1,800–3,000 for a one-page Starter Website and TT$3,500–6,000 for a 3–5 page Small Business Website. This estimator is an internal planning aid: complexity, pages, add-ons and hourly rate can move the result outside those ranges. Larger/custom work is quoted separately. Confirm scope, expenses, revisions and terms before sending a quote.</aside>
 </main>
 <footer>DAYMARK · PROJECT ESTIMATOR · LEARNING PROTOTYPE</footer>
 </body></html>
