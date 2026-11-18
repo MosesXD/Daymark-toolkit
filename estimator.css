@@ -17,3 +17,5 @@ button{width:100%;margin-top:17px;background:var(--accent);color:#fff;border:0;b
 aside{margin-top:16px;background:var(--soft);padding:15px;border-radius:10px;font-size:11px;line-height:1.7;color:#667366}
 footer{text-align:center;padding:20px;color:#9aa398;font-size:10px;letter-spacing:1px}
 @media(max-width:520px){header{gap:9px;padding:10px 18px}header b{flex:1 1 100%}header .back-link{flex:1}header span{white-space:nowrap}main{padding-top:30px}}
+
+.currency-switch{display:flex;gap:8px;margin:0 0 18px}.currency-switch button{width:auto;min-width:74px;margin:0;padding:9px 15px;background:var(--soft);color:var(--accent-dark);border:1px solid var(--line)}.currency-switch button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
