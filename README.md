@@ -11,7 +11,7 @@ A personal workspace prototype built with HTML, CSS, and vanilla JavaScript.
 The workspace includes Today, Inbox, Upcoming, Someday, Logbook, custom lists, a focus timer, quick capture, routines, insights, settings, and data import/export. The mobile sidebar includes close controls.
 
 ## Estimator
-Choose a project type, page/screen count, complexity, optional add-ons, and an hourly planning rate. The displayed range updates as inputs change, and a summary can be copied.
+Choose a project type, page count, complexity, optional add-ons, and an hourly planning rate. The displayed range updates as inputs change, and a summary can be copied. The project baselines are aligned to the Moses' Hub public Starter Website and Small Business Website starting ranges. The estimator can display TTD or USD; USD uses a fixed TT$6.67 per US$1 planning equivalent, not a live exchange-rate feed. Keep this assumption aligned with the Services page when prices change.
 
 ## Run
 Open `index.html` or `project-estimator.html` in a modern browser.
