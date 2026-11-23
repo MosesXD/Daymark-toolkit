@@ -11,10 +11,10 @@ A personal workspace prototype built with HTML, CSS, and vanilla JavaScript.
 The workspace includes Today, Inbox, Upcoming, Someday, Logbook, custom lists, a focus timer, quick capture, routines, insights, settings, and data import/export. The mobile sidebar includes close controls.
 
 ## Estimator
-Choose a project type, page count, complexity, optional add-ons, and an hourly planning rate. The displayed range updates as inputs change, and a summary can be copied. The project baselines are aligned to the Moses' Hub public Starter Website and Small Business Website starting ranges. The estimator can display TTD or USD; USD uses a fixed TT$6.67 per US$1 planning equivalent, not a live exchange-rate feed. Keep this assumption aligned with the Services page when prices change.
+Choose a project type, page count, complexity, optional add-ons, and an hourly planning rate. The displayed range updates as inputs change, and a summary can be copied. The project baselines are aligned to the Moses' Hub public Starter Website and Small Business Website starting ranges. The estimator can display TTD or USD; USD uses a fixed TT$6.67 per US$1 planning equivalent, not a live exchange-rate feed. Keep this assumption aligned with the Services page when prices change. Calculation rules are isolated in `estimator-core.js` and covered by Node's built-in test runner.
 
 ## Run
-Open `index.html` or `project-estimator.html` in a modern browser.
+Open `index.html` or `project-estimator.html` in a modern browser. Run the estimator calculation tests with `node --test tests/*.test.mjs`.
 
 ## Limitations
 Workspace data is stored in this browser and is not synced to an account or cloud service. Integrations are interface/demo functionality, not live email, calendar, or health connections. The estimator uses editable demo assumptions, not a market-validated pricing model; it does not account for every tax, expense, revision, legal term, or client circumstance. Confirm project scope before quoting. Browser and mobile testing should be completed before presenting the site as client-ready.
